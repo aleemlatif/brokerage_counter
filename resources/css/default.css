@@ -1,0 +1,236 @@
+/*	................................................................
+		author: 		Aleem Latif
+ 		description: 	CSS styles for Brokerage Counter		
+.................................................................. */
+html, body {
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+html {
+	font-size: 25%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: #FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:3.25em;
+	line-height:1.5em;
+	text-align:center;
+	min-width:462px;
+	min-height:260px;
+}
+/*********************
+ Generic Rules
+ **/
+a, a:visited, a:focus, a:active {
+	color:#3A6899;
+	text-decoration:none;
+}
+a:hover {
+	color:#3A6899;
+	text-decoration: underline;
+}
+a img {
+	border: 0;
+}
+p {
+	line-height: 1.5em;
+}
+h1, h2, h3, h4, h5 {
+	font-size: 1em;
+	line-height: 1em;
+	font-weight: bold;
+}
+.hidden {
+	display:none;
+}
+.block {
+	display:block;
+}
+.no-borders {
+	border:none!important;
+}
+.bold {
+	font-weight:bold;
+}
+.note {
+	font-size:0.9em;
+	color: #F00;
+	font-style:italic;
+}
+/******************************************************
+	horizontal and vertical aligned content block
+**/
+
+#vertical-container {
+	float:left;
+	height:50%;
+	margin-top:-139px;/* half vertical height*/
+	width:100%;
+}
+#horizontal-container {
+	width:460px;
+	margin-left:auto;
+	margin-right:auto;
+	height:256px;
+	border:1px solid #dddddd;
+	overflow:auto;/* allow content to scroll inside element */
+	text-align:left;
+	clear:both;
+}
+.module {
+	width: 350px;
+	height: 150px;
+	vertical-align:middle;
+	text-align:left;
+	margin: 0 auto;
+	position:relative;
+	border: 0px solid green;
+	display:block;
+	top: 20%;
+	background: #ededed url("../images/module_bg.gif") 0 100% repeat-x;
+}
+.module h1 {
+	background-color: #4A4949;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 2em;
+	line-height: 1.8em;
+	padding-left: 0.8em;
+}
+.module .module-body {
+	color: #000000;
+	font-size: 1em;
+	font-weight: normal;
+	height: 100px;
+	border: 1px solid #d3d1d1;
+	background-color: #FFFFFF;
+	margin: 10px;
+	border-radius: 3px 3px 3px 3px;
+}
+.module .module-body .row {
+	padding: 10px 20px 12px;
+}
+.module-body .row .meter-label, .module-body .row .meter-container, .module-body .row #target-block {
+	display:block;
+	float:left;
+}
+.module .module-body .row #target-block {
+	background: url("../images/sprites.gif") no-repeat scroll 0 -71px transparent;
+	width: 51px;
+	height: 42px;
+	text-align: center;
+	color: #ffffff;
+}
+.module .module-body .row #target-block span {
+	display:block;
+	font-size: 0.9em;
+	line-height: 1.4em;
+	vertical-align:middle;
+}
+.module .module-body .row #target-block h3 {
+	font-size: 1.4em;
+	line-height: 1.4em;
+	vertical-align:middle;
+}
+.module-body .row .meter-label {
+	width: 80px;
+	padding-top: 12px;
+}
+.module-body .row .meter-container {
+	padding: 15px 0 0 0;
+}
+.module-body .row #brokerage-meter {
+	background-color: #CECECE;
+	background-image: none;
+	border: 4px solid #CECECE;
+	border-radius: 0 0 0 0;
+	height: 7px;
+	width: 121px;
+	cursor: pointer;
+	position: relative;
+}
+.module-body .row #currBrokerage {
+	font-size: 0.8em;
+	font-weight: bold;
+	margin: 2px;
+	position: absolute;
+	top: 1.4em;
+	left: 80%;
+}
+.module-body .row .ui-slider .ui-slider-range {
+	background: url("../images/bar_bg.gif") repeat-x scroll 0 0 transparent;
+}
+.module-body .row .ui-slider .ui-slider-handle {
+	background: url("../images/sprites.gif") no-repeat scroll 0 -26px transparent!important;
+	top: 0.5em;
+	border: none;
+	cursor:pointer;
+}
+.module-body .message {
+	text-align: center;
+	padding: 0 20px;
+}
+.module-body .message .qualified, .module-body .message .unqualified {
+	line-height: 25px;
+	vertical-align:middle;
+}
+.module-body .message .unqualified .brokerage-diff {
+	font-weight:bold;
+	margin: 0 2px;
+}
+.module-body .message .qualified .icon {
+	background: url("../images/sprites.gif") no-repeat scroll 0 0 transparent;
+	display: inline-block;
+	height: 26px;
+	width: 23px;
+	margin-right: 2px;
+}
+.module-body .message .unqualified .icon {
+	background: url("../images/sprites.gif") no-repeat scroll 0 -44px transparent;
+	display: inline-block;
+	height: 25px;
+	width: 26px;
+}
+/******************
+ page footer 
+**/
+#footer-wrapper {
+	left:0;
+	bottom:0;
+	position:absolute;
+	width:100%;
+	border-top: 1px solid #999999;
+	text-align:center;
+}
+.page-footer {
+	margin:auto;
+	width:80%;
+	color:#333333;
+	font-weight:normal;
+	font-size: 0.8em;
+}
+/**
+* clearfix 
+*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* hides from ie-mac \*/
+
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
